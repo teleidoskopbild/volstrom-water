@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Amulya";
+  src: url("/fonts/Amulya-Variable.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Synonym";
+  src: url("/fonts/Synonym-Variable.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-amulya: Amulya;
+  --font-synonym: Synonym;
+}
