@@ -28,14 +28,16 @@ onMounted(() => {
     <div class="ml-6 flex flex-col">
       <div class="flex flex-col md: justify-center md:flex-row">
         <div class="animate-slideDown mb-8 mt-8 md:ml-6 flex flex-col gap-4">
-          <h1 class="text-center text-5xl md:text-6xl font-amulya">VOLSTROM</h1>
-          <p class="text-center text-left md:text-center text-4xl font-synonym">
+          <h1 class="text-center text-5xl md:text-6xl lg:text-7xl font-amulya">
+            VOLSTROM
+          </h1>
+          <p class="text-center text-4xl lg:text-5xl font-synonym">
             Designer Water
           </p>
         </div>
       </div>
       <div
-        class="animate-slideUp ml-8 max-w-[30vw] bg-white/75 p-12 rounded-lg shadow-lg flex flex-col justify-center items-center"
+        class="animate-slideUp ml-8 max-w-[50vw] lg:max-w-[40vw] bg-white/75 p-12 rounded-lg shadow-lg flex flex-col justify-center items-center"
       >
         <h2 class="text-xl md:text-3xl font-amulya text-center mb-4">
           DISCOVER THE PUREST WATER
