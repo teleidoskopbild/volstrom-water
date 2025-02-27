@@ -31,9 +31,9 @@ onMounted(() => {
           <h1 class="text-center text-5xl md:text-6xl lg:text-7xl font-amulya">
             VOLSTROM
           </h1>
-          <!-- <p class="text-center text-2xl lg:text-4xl font-synonym">
+          <p class="text-center text-2xl lg:text-4xl font-synonym">
             Designer Water
-          </p> -->
+          </p>
         </div>
       </div>
       <div
