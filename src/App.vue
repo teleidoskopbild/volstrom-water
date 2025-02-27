@@ -13,12 +13,12 @@ onMounted(() => {
 <template>
   <div
     id="app"
-    class="flex items-center justify-center overflow-hidden h-screen bg-[url('images/mountains.jpg')] bg-cover bg-center"
+    class="relative flex items-center justify-center overflow-hidden h-screen bg-[url('images/mountains.jpg')] bg-cover bg-center"
   >
     <img
       src="/images/water.png"
       alt="water-bottle"
-      class="mt-8 ml-4 md:ml-10 max-h-[75vh] w-auto object-contain"
+      class="mt-8 ml-0 md:ml-10 max-h-[75vh] w-auto object-contain"
       :class="{
         'animate-slideUp': !isPulsing,
         'animate-pulseBottle': isPulsing,
@@ -26,7 +26,7 @@ onMounted(() => {
     />
 
     <div class="ml-6 flex flex-col">
-      <div class="flex flex-col md: justify-center md:flex-row">
+      <div class="-mt-16 flex flex-col md:justify-center md:flex-row">
         <div class="animate-slideDown mb-8 mt-8 md:ml-6 flex flex-col gap-4">
           <h1 class="text-center text-5xl md:text-6xl lg:text-7xl font-amulya">
             VOLSTROM
@@ -58,10 +58,50 @@ onMounted(() => {
           design.
         </p>
         <button
-          class="cursor-pointer bg-black text-white py-2 px-6 transition-colors hover:scale-110 transition-transform duration-200 ease-in"
+          class="z-10 cursor-pointer bg-black text-white py-2 px-6 transition-colors hover:scale-110 transition-transform duration-200 ease-in"
         >
           GET YOURS NOW
         </button>
+      </div>
+    </div>
+    <div
+      class="z-0 pointer-events-none absolute -bottom-2 w-full overflow-hidden"
+    >
+      <div class="flex">
+        <img
+          src="/images/fog1.png"
+          alt="Description"
+          class="animate-fogMove w-auto max-h-[30vh] object-cover"
+        />
+        <!-- <img
+          src="/images/fog2.png"
+          alt="Description"
+          class="w-auto max-h-[30vh] object-cover"
+        /> -->
+        <img
+          src="/images/fog3.png"
+          alt="Description"
+          class="animate-fogMove w-auto max-h-[30vh] object-cover"
+          style="animation-delay: 0s"
+        />
+        <img
+          src="/images/fog4.png"
+          alt="Description"
+          class="animate-fogMove w-auto max-h-[30vh] object-cover"
+          style="animation-delay: 1s"
+        />
+        <img
+          src="/images/fog5.png"
+          alt="Description"
+          class="animate-fogMove w-auto max-h-[30vh] object-cover"
+          style="animation-delay: 2s"
+        />
+        <img
+          src="/images/fog4.png"
+          alt="Description"
+          class="animate-fogMove w-auto max-h-[30vh] object-cover"
+          style="animation-delay: 3s"
+        />
       </div>
     </div>
   </div>
@@ -110,5 +150,24 @@ onMounted(() => {
 
 .animate-slideDown {
   animation: slideDown 4s ease-out forwards;
+}
+
+@keyframes fogMove {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-fogMove {
+  animation: fogMove 10s linear infinite;
 }
 </style>
