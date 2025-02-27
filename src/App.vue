@@ -64,43 +64,57 @@ onMounted(() => {
         </button>
       </div>
     </div>
-    <div
-      class="z-0 pointer-events-none absolute -bottom-2 w-full overflow-hidden"
-    >
+    <div class="pointer-events-none absolute -bottom-2 w-full overflow-hidden">
       <div class="flex">
         <img
           src="/images/fog1.png"
           alt="Description"
-          class="animate-fogMove w-auto max-h-[30vh] object-cover"
-        />
-        <!-- <img
-          src="/images/fog2.png"
-          alt="Description"
-          class="w-auto max-h-[30vh] object-cover"
-        /> -->
-        <img
-          src="/images/fog3.png"
-          alt="Description"
-          class="animate-fogMove w-auto max-h-[30vh] object-cover"
+          class="opacity-0 w-auto max-h-[30vh] object-cover"
+          :class="{
+            hidden: !isPulsing,
+            'animate-fogMove': isPulsing,
+          }"
           style="animation-delay: 0s"
         />
         <img
           src="/images/fog4.png"
           alt="Description"
-          class="animate-fogMove w-auto max-h-[30vh] object-cover"
-          style="animation-delay: 1s"
+          class="opacity-0 w-auto max-h-[30vh] object-cover"
+          :class="{
+            hidden: !isPulsing,
+            'animate-fogMove': isPulsing,
+          }"
+          style="animation-delay: 2s"
+        />
+        <img
+          src="/images/fog1.png"
+          alt="Description"
+          class="opacity-0 w-auto max-h-[30vh] object-cover"
+          style="animation-delay: 4s"
+          :class="{
+            hidden: !isPulsing,
+            'animate-fogMove': isPulsing,
+          }"
         />
         <img
           src="/images/fog5.png"
           alt="Description"
-          class="animate-fogMove w-auto max-h-[30vh] object-cover"
-          style="animation-delay: 2s"
+          class="opacity-0 w-auto max-h-[30vh] object-cover"
+          style="animation-delay: 6s"
+          :class="{
+            hidden: !isPulsing,
+            'animate-fogMove': isPulsing,
+          }"
         />
         <img
           src="/images/fog4.png"
           alt="Description"
-          class="animate-fogMove w-auto max-h-[30vh] object-cover"
-          style="animation-delay: 3s"
+          class="opacity-0 w-auto max-h-[30vh] object-cover"
+          style="animation-delay: 8s"
+          :class="{
+            hidden: !isPulsing,
+            'animate-fogMove': isPulsing,
+          }"
         />
       </div>
     </div>
@@ -157,12 +171,12 @@ onMounted(() => {
     opacity: 0;
     transform: scale(1);
   }
-  20%,
-  80% {
+  40%,
+  60% {
     opacity: 1;
   }
   100% {
-    transform: scale(2);
+    transform: scale(1.6);
     opacity: 0;
   }
 }
