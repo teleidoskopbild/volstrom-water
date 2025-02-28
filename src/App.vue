@@ -13,7 +13,7 @@ onMounted(() => {
 <template>
   <div
     id="app"
-    class="relative flex items-center justify-center overflow-hidden h-screen bg-[url('images/mountains.jpg')] bg-cover bg-center"
+    class="relative flex items-center justify-center overflow-hidden h-screen bg-[url('/images/mountains.jpg')] bg-cover bg-center"
   >
     <img
       src="/images/water.png"
