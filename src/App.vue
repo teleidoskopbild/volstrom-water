@@ -105,13 +105,13 @@ onMounted(() => {
             hidden: !isPulsing,
             'animate-fogMove': isPulsing,
           }"
-          style="animation-delay: 2s"
+          style="animation-delay: 1s"
         />
         <img
           src="/images/fog1.png"
           alt="Description"
           class="opacity-0 w-auto max-h-[30vh] object-cover"
-          style="animation-delay: 4s"
+          style="animation-delay: 2s"
           :class="{
             hidden: !isPulsing,
             'animate-fogMove': isPulsing,
@@ -121,7 +121,7 @@ onMounted(() => {
           src="/images/fog5.png"
           alt="Description"
           class="opacity-0 w-auto max-h-[30vh] object-cover"
-          style="animation-delay: 6s"
+          style="animation-delay: 3s"
           :class="{
             hidden: !isPulsing,
             'animate-fogMove': isPulsing,
@@ -131,7 +131,7 @@ onMounted(() => {
           src="/images/fog4.png"
           alt="Description"
           class="opacity-0 w-auto max-h-[30vh] object-cover"
-          style="animation-delay: 8s"
+          style="animation-delay: 4s"
           :class="{
             hidden: !isPulsing,
             'animate-fogMove': isPulsing,
@@ -203,6 +203,6 @@ onMounted(() => {
 }
 
 .animate-fogMove {
-  animation: fogMove 10s linear infinite;
+  animation: fogMove 6s linear infinite;
 }
 </style>
