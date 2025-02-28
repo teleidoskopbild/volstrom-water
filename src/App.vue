@@ -3,6 +3,8 @@ import { ref, onMounted } from "vue";
 
 const isPulsing = ref(false);
 
+const isToggled = ref(true);
+
 onMounted(() => {
   setTimeout(() => {
     isPulsing.value = true;
@@ -13,8 +15,27 @@ onMounted(() => {
 <template>
   <div
     id="app"
-    class="relative flex items-center justify-center overflow-hidden h-screen bg-[url('/images/mountains.jpg')] bg-cover bg-center"
+    class="relative flex items-center justify-center overflow-hidden h-screen bg-cover bg-center"
+    :class="{
+      'bg-[url(\'/images/mountains.jpg\')]': isToggled,
+      'bg-none': !isToggled,
+    }"
   >
+    <div class="absolute top-4 left-4 text-white rounded-lg">
+      <label class="inline-flex items-center cursor-pointer">
+        <input
+          type="checkbox"
+          value=""
+          class="sr-only peer"
+          @click="isToggled = !isToggled"
+          checked
+        />
+        <div
+          class="relative w-12 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
+        ></div>
+      </label>
+    </div>
+
     <img
       src="/images/water.png"
       alt="water-bottle"
@@ -58,7 +79,7 @@ onMounted(() => {
           design.
         </p>
         <button
-          class="z-10 cursor-pointer bg-black text-white py-2 px-6 transition-colors hover:scale-110 transition-transform duration-200 ease-in"
+          class="rounded-md text-lg z-10 cursor-pointer bg-black text-white py-2 px-6 transition-colors hover:scale-110 transition-transform duration-200 ease-in"
         >
           GET YOURS NOW
         </button>
