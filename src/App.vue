@@ -15,9 +15,9 @@ onMounted(() => {
 <template>
   <div
     id="app"
-    class="relative flex items-center justify-center overflow-hidden h-screen bg-cover bg-center"
+    class="relative flex items-center justify-center overflow-hidden h-screen bg-cover bg-center]"
     :class="{
-      'bg-[url(\'/images/mountains.jpg\')]': isToggled,
+      'bg-[url(/images/mountains.jpg)]': isToggled,
       'bg-none': !isToggled,
     }"
   >
