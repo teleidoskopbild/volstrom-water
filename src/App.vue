@@ -5,15 +5,45 @@ const isPulsing = ref(false);
 
 const isToggled = ref(true);
 
+const isLoading = ref(true);
+
 onMounted(() => {
   setTimeout(() => {
-    isPulsing.value = true;
-  }, 4000);
+    const images = [
+      "/images/mountains.jpg",
+      "/images/water.png",
+      "/images/fog1.png",
+      "/images/fog4.png",
+      "/images/fog5.png",
+    ];
+
+    Promise.all(
+      images.map((src) => {
+        return new Promise((resolve) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = resolve;
+        });
+      })
+    ).then(() => {
+      isLoading.value = false;
+      setTimeout(() => {
+        isPulsing.value = true;
+      }, 4000);
+    });
+  }, 100);
 });
 </script>
 
 <template>
   <div
+    v-if="isLoading"
+    class="fixed inset-0 flex items-center justify-center bg-white"
+  >
+    <p class="animate-pulse text-black text-xl">Loading</p>
+  </div>
+  <div
+    v-else
     id="app"
     class="relative flex items-center justify-center overflow-hidden h-screen bg-cover bg-center]"
     :class="{
