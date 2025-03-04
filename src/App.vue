@@ -124,6 +124,7 @@ onMounted(() => {
           :class="{
             hidden: !isPulsing,
             'animate-fogMove': isPulsing,
+            hidden: !isToggled,
           }"
           style="animation-delay: 0s"
         />
@@ -134,6 +135,7 @@ onMounted(() => {
           :class="{
             hidden: !isPulsing,
             'animate-fogMove': isPulsing,
+            hidden: !isToggled,
           }"
           style="animation-delay: 1s"
         />
@@ -145,6 +147,7 @@ onMounted(() => {
           :class="{
             hidden: !isPulsing,
             'animate-fogMove': isPulsing,
+            hidden: !isToggled,
           }"
         />
         <img
@@ -155,6 +158,7 @@ onMounted(() => {
           :class="{
             hidden: !isPulsing,
             'animate-fogMove': isPulsing,
+            hidden: !isToggled,
           }"
         />
         <img
@@ -165,6 +169,7 @@ onMounted(() => {
           :class="{
             hidden: !isPulsing,
             'animate-fogMove': isPulsing,
+            hidden: !isToggled,
           }"
         />
       </div>
